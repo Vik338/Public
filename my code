@@ -1,0 +1,23 @@
+def missing_backend_error(dune, ppx):
+    print(
+        "In dune file " + dune +
+        ", the instrumentation clause is missing; there should be one containing a backend for "
+        + (sexpdata.dumps(ppx)))
+    global exit_code
+    exit_code = 1
+
+@@ -68,8 +78,15 @@ def get_ppx_ndx(dune, ppxs, ppx):
+        global exit_code
+        exit_code = 1
+
+# for libraries, require ppx_version and bisect_ppx
+# for executables, require only ppx_version, because bisect_ppx only applies to inline tests
+def get_backends_ndx(dune, backends, ppx):
+    try:
+        backends.index(ppx)
+    except:
+        print("In dune file " + dune +
+              ", the instrumentation backends clause does not contain " +
+              (sexpdata.dumps(ppx)))
+        global exit_code
+        exit_code = 1
