@@ -1,0 +1,334 @@
+/* Дополнительные анимации для улучшения визуального опыта */
+
+/* Анимация появления страницы */
+@keyframes pageLoad {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+body {
+    animation: pageLoad 0.8s ease-out;
+}
+
+/* Анимация для карточек NFT */
+@keyframes cardFloat {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
+}
+
+.nft-card {
+    animation: cardFloat 6s ease-in-out infinite;
+}
+
+.nft-card:nth-child(even) {
+    animation-delay: -3s;
+}
+
+/* Анимация для статистики */
+@keyframes countUp {
+    0% {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.stat-value {
+    animation: countUp 1s ease-out;
+}
+
+/* Анимация для кнопок */
+@keyframes buttonPulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(88, 166, 255, 0.7);
+    }
+    70% {
+        box-shadow: 0 0 0 10px rgba(88, 166, 255, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(88, 166, 255, 0);
+    }
+}
+
+.sell-now-btn:hover {
+    animation: buttonPulse 1s infinite;
+}
+
+/* Анимация для логотипа */
+@keyframes logoSpin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.logo-avatar:hover {
+    animation: logoSpin 2s linear infinite;
+}
+
+/* Анимация для навигации */
+@keyframes navSlide {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.nav-item {
+    animation: navSlide 0.5s ease-out;
+}
+
+.nav-item:nth-child(1) { animation-delay: 0.1s; }
+.nav-item:nth-child(2) { animation-delay: 0.2s; }
+.nav-item:nth-child(3) { animation-delay: 0.3s; }
+.nav-item:nth-child(4) { animation-delay: 0.4s; }
+
+/* Анимация для активности */
+@keyframes activitySlide {
+    0% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.activity-item {
+    animation: activitySlide 0.6s ease-out;
+}
+
+/* Анимация для модального окна */
+@keyframes modalZoom {
+    0% {
+        transform: scale(0.3) rotate(-10deg);
+        opacity: 0;
+    }
+    50% {
+        transform: scale(1.05) rotate(2deg);
+    }
+    100% {
+        transform: scale(1) rotate(0deg);
+        opacity: 1;
+    }
+}
+
+.modal-content {
+    animation: modalZoom 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/* Анимация для цен */
+@keyframes priceGlow {
+    0%, 100% {
+        text-shadow: 0 0 5px rgba(88, 166, 255, 0.5);
+    }
+    50% {
+        text-shadow: 0 0 20px rgba(88, 166, 255, 0.8), 0 0 30px rgba(88, 166, 255, 0.6);
+    }
+}
+
+.nft-price {
+    animation: priceGlow 3s ease-in-out infinite;
+}
+
+/* Анимация для фильтров */
+@keyframes filterSlide {
+    0% {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.sidebar > div {
+    animation: filterSlide 0.4s ease-out;
+}
+
+.sidebar > div:nth-child(1) { animation-delay: 0.1s; }
+.sidebar > div:nth-child(2) { animation-delay: 0.2s; }
+.sidebar > div:nth-child(3) { animation-delay: 0.3s; }
+
+/* Анимация для хедера при скролле */
+@keyframes headerShrink {
+    0% {
+        padding: 15px 20px;
+    }
+    100% {
+        padding: 10px 20px;
+    }
+}
+
+.header.scrolled {
+    animation: headerShrink 0.3s ease-out forwards;
+}
+
+/* Анимация для рейтинга редкости */
+@keyframes rarityShine {
+    0% {
+        background-position: -100% 0;
+    }
+    100% {
+        background-position: 100% 0;
+    }
+}
+
+.rarity-badge {
+    background: linear-gradient(90deg, 
+        var(--gradient-primary), 
+        rgba(255,255,255,0.3), 
+        var(--gradient-primary));
+    background-size: 200% 100%;
+    animation: rarityShine 3s ease-in-out infinite;
+}
+
+/* Анимация для кнопок покупки */
+@keyframes buyButtonGlow {
+    0% {
+        box-shadow: 0 0 5px rgba(88, 166, 255, 0.3);
+    }
+    50% {
+        box-shadow: 0 0 25px rgba(88, 166, 255, 0.6), 0 0 50px rgba(88, 166, 255, 0.4);
+    }
+    100% {
+        box-shadow: 0 0 5px rgba(88, 166, 255, 0.3);
+    }
+}
+
+.buy-btn:hover {
+    animation: buyButtonGlow 2s ease-in-out infinite;
+}
+
+/* Анимация для чекбоксов */
+@keyframes checkboxCheck {
+    0% {
+        transform: scale(0) rotate(45deg);
+    }
+    50% {
+        transform: scale(1.2) rotate(45deg);
+    }
+    100% {
+        transform: scale(1) rotate(45deg);
+    }
+}
+
+.status-option input[type="checkbox"]:checked + .checkmark::after {
+    animation: checkboxCheck 0.3s ease-out;
+}
+
+/* Анимация для селектов */
+@keyframes selectFocus {
+    0% {
+        border-color: var(--border-color);
+        box-shadow: none;
+    }
+    100% {
+        border-color: var(--accent-blue);
+        box-shadow: 0 0 0 3px rgba(88, 166, 255, 0.1);
+    }
+}
+
+.sort-select:focus {
+    animation: selectFocus 0.2s ease-out forwards;
+}
+
+/* Анимация загрузки */
+@keyframes loadingDots {
+    0%, 20% {
+        color: rgba(88, 166, 255, 0.2);
+    }
+    40% {
+        color: rgba(88, 166, 255, 1);
+    }
+    60%, 100% {
+        color: rgba(88, 166, 255, 0.2);
+    }
+}
+
+.loading-dots::after {
+    content: '...';
+    animation: loadingDots 1.4s ease-in-out infinite;
+}
+
+/* Анимация для эмодзи в NFT */
+@keyframes emojiDance {
+    0%, 100% {
+        transform: rotate(0deg) scale(1);
+    }
+    25% {
+        transform: rotate(-5deg) scale(1.1);
+    }
+    75% {
+        transform: rotate(5deg) scale(1.1);
+    }
+}
+
+.nft-card:hover .nft-image span {
+    animation: emojiDance 0.6s ease-in-out;
+}
+
+/* Анимация для иконки огня */
+@keyframes fireFlicker {
+    0%, 100% {
+        transform: scale(1) rotate(0deg);
+        filter: hue-rotate(0deg);
+    }
+    25% {
+        transform: scale(1.1) rotate(-2deg);
+        filter: hue-rotate(10deg);
+    }
+    50% {
+        transform: scale(0.9) rotate(2deg);
+        filter: hue-rotate(-10deg);
+    }
+    75% {
+        transform: scale(1.05) rotate(-1deg);
+        filter: hue-rotate(5deg);
+    }
+}
+
+.verified-icon {
+    animation: fireFlicker 2s ease-in-out infinite;
+}
+
+/* Медиа-запросы для анимаций */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* Анимация для мобильных устройств */
+@media (max-width: 768px) {
+    .nft-card {
+        animation-duration: 8s;
+    }
+    
+    .modal-content {
+        animation: modalZoom 0.3s ease-out;
+    }
+}

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced NFT Marketplace - Tallys Collection</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="animations.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.7.0/p5.min.js"></script>
+</head>
+<body>
+    <div id="particles-background"></div>
+    
+    <header class="header">
+        <div class="container">
+            <div class="header-left">
+                <div class="logo">
+                    <div class="logo-avatar">🐸</div>
+                    <span class="logo-text">Tallys</span>
+                    <i class="fas fa-fire verified-icon"></i>
+                </div>
+                <nav class="nav">
+                    <a href="#" class="nav-item active">Items</a>
+                    <a href="#" class="nav-item">My Items</a>
+                    <a href="#" class="nav-item">Bids</a>
+                    <a href="#" class="nav-item">Holders</a>
+                </nav>
+            </div>
+            
+            <div class="header-stats">
+                <div class="stat-item">
+                    <span class="stat-label">Floor Price</span>
+                    <span class="stat-value">◊ 22.858</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">Top Bid</span>
+                    <span class="stat-value">◊ 17.55</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">1D Volume</span>
+                    <span class="stat-value">◊ 246</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">1D Sales</span>
+                    <span class="stat-value">13</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="container">
+            <aside class="sidebar">
+                <div class="status-section">
+                    <h3>Status</h3>
+                    <div class="status-options">
+                        <label class="status-option">
+                            <input type="checkbox" checked>
+                            <span class="checkmark"></span>
+                            Listed
+                        </label>
+                        <label class="status-option">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            Unlisted
+                        </label>
+                    </div>
+                </div>
+
+                <div class="instant-sell-section">
+                    <div class="instant-sell-card">
+                        <div class="instant-sell-icon">⚡</div>
+                        <h4>Instant Sell</h4>
+                        <div class="price">◊ 17.55</div>
+                        <button class="sell-now-btn">Sell Now</button>
+                        <button class="make-offer-btn">Make Offer</button>
+                    </div>
+                </div>
+            </aside>
+
+            <div class="content">
+                <div class="content-header">
+                    <div class="view-controls">
+                        <button class="view-btn active" data-view="grid"><i class="fas fa-th"></i></button>
+                        <button class="view-btn" data-view="list"><i class="fas fa-list"></i></button>
+                    </div>
+                    
+                    <div class="sort-controls">
+                        <select class="sort-select">
+                            <option>Price ↑</option>
+                            <option>Price ↓</option>
+                            <option>Recently Listed</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="nft-grid" id="nftGrid">
+                    <!-- NFT карточки будут генерироваться JavaScript -->
+                </div>
+            </div>
+
+            <aside class="activity-sidebar">
+                <div class="activity-feed">
+                    <h3>Activity</h3>
+                    <div class="activity-item">
+                        <div class="activity-avatar">🐸</div>
+                        <div class="activity-details">
+                            <div class="activity-type">🔥 Coll. Bid</div>
+                            <div class="activity-time">8 minutes</div>
+                            <div class="activity-price">◊ 69.81 ↗ ◊ 17.55</div>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <div id="nftModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="modal-body">
+                <div class="modal-image">
+                    <img id="modalImage" src="" alt="NFT">
+                </div>
+                <div class="modal-info">
+                    <h2 id="modalTitle"></h2>
+                    <div id="modalPrice"></div>
+                    <div class="modal-actions">
+                        <button class="buy-btn">Buy Now</button>
+                        <button class="bid-btn">Place Bid</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="particles.js"></script>
+    <script src="p5-effects.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
