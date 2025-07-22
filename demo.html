@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🎨 Демонстрация улучшений NFT Marketplace</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            margin: 0;
+            padding: 40px;
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        h1 {
+            text-align: center;
+            font-size: 3em;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        .demo-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        .demo-card {
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 30px;
+            border: 1px solid rgba(255,255,255,0.2);
+            transition: all 0.3s ease;
+        }
+        .demo-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        }
+        .demo-card h3 {
+            color: #FFD700;
+            margin-bottom: 15px;
+            font-size: 1.5em;
+        }
+        .demo-card ul {
+            list-style: none;
+            padding: 0;
+        }
+        .demo-card li {
+            margin: 10px 0;
+            padding-left: 20px;
+            position: relative;
+        }
+        .demo-card li::before {
+            content: '✨';
+            position: absolute;
+            left: 0;
+        }
+        .launch-btn {
+            display: block;
+            width: 200px;
+            margin: 40px auto;
+            padding: 15px 30px;
+            background: linear-gradient(45deg, #FF6B6B, #4ECDC4);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            text-align: center;
+            font-weight: bold;
+            font-size: 1.2em;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+        .launch-btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.4);
+        }
+        .tech-stack {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin: 40px 0;
+            flex-wrap: wrap;
+        }
+        .tech-item {
+            background: rgba(255,255,255,0.2);
+            padding: 10px 20px;
+            border-radius: 25px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎨 Enhanced NFT Marketplace</h1>
+        <p style="text-align: center; font-size: 1.2em; margin-bottom: 40px;">
+            Интерактивная демонстрация современных веб-технологий для улучшения пользовательского опыта
+        </p>
+
+        <div class="tech-stack">
+            <div class="tech-item">HTML5</div>
+            <div class="tech-item">CSS3</div>
+            <div class="tech-item">JavaScript ES6+</div>
+            <div class="tech-item">p5.js</div>
+            <div class="tech-item">Canvas API</div>
+            <div class="tech-item">Web Audio API</div>
+        </div>
+
+        <a href="index.html" class="launch-btn">🚀 Запустить демо</a>
+
+        <div class="demo-grid">
+            <div class="demo-card">
+                <h3>🎭 Визуальные эффекты</h3>
+                <ul>
+                    <li>Анимированные частицы</li>
+                    <li>Градиентные фоны</li>
+                    <li>Эффекты свечения</li>
+                    <li>Плавающие элементы</li>
+                    <li>Искорки при наведении</li>
+                    <li>Морфинг анимации</li>
+                </ul>
+            </div>
+
+            <div class="demo-card">
+                <h3>🎯 Интерактивность</h3>
+                <ul>
+                    <li>Hover эффекты</li>
+                    <li>Звуковые уведомления</li>
+                    <li>Модальные окна</li>
+                    <li>Smooth переходы</li>
+                    <li>Отзывчивый дизайн</li>
+                    <li>Жесты и анимации</li>
+                </ul>
+            </div>
+
+            <div class="demo-card">
+                <h3>🔧 Функциональность</h3>
+                <ul>
+                    <li>Динамическая генерация</li>
+                    <li>Фильтрация и сортировка</li>
+                    <li>Смена видов отображения</li>
+                    <li>Live обновления</li>
+                    <li>Анимированная статистика</li>
+                    <li>Поиск и навигация</li>
+                </ul>
+            </div>
+
+            <div class="demo-card">
+                <h3>🎨 Современный дизайн</h3>
+                <ul>
+                    <li>Dark theme</li>
+                    <li>Glassmorphism</li>
+                    <li>Neumorphism</li>
+                    <li>CSS переменные</li>
+                    <li>Микроанимации</li>
+                    <li>Адаптивная сетка</li>
+                </ul>
+            </div>
+
+            <div class="demo-card">
+                <h3>⚡ Производительность</h3>
+                <ul>
+                    <li>60 FPS анимации</li>
+                    <li>GPU ускорение</li>
+                    <li>Lazy loading</li>
+                    <li>Throttled события</li>
+                    <li>Оптимизация памяти</li>
+                    <li>Кроссбраузерность</li>
+                </ul>
+            </div>
+
+            <div class="demo-card">
+                <h3>🎮 UX улучшения</h3>
+                <ul>
+                    <li>Микроинтеракции</li>
+                    <li>Loading состояния</li>
+                    <li>Error handling</li>
+                    <li>Accessibility</li>
+                    <li>Keyboard navigation</li>
+                    <li>Touch gestures</li>
+                </ul>
+            </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 60px; padding: 40px; background: rgba(255,255,255,0.1); border-radius: 20px;">
+            <h2>🚀 Как запустить</h2>
+            <p>1. Откройте index.html в современном браузере</p>
+            <p>2. Наведите курсор на карточки NFT</p>
+            <p>3. Кликните по карточкам для детального просмотра</p>
+            <p>4. Попробуйте разные виды отображения</p>
+            <p>5. Наслаждайтесь интерактивным опытом!</p>
+        </div>
+
+        <div style="text-align: center; margin-top: 40px; opacity: 0.8;">
+            <p>Создано с ❤️ для демонстрации современных веб-технологий</p>
+        </div>
+    </div>
+
+    <script>
+        // Добавляем интерактивные эффекты для демо страницы
+        document.addEventListener('mousemove', (e) => {
+            const cards = document.querySelectorAll('.demo-card');
+            cards.forEach(card => {
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                
+                if (x >= 0 && x <= rect.width && y >= 0 && y <= rect.height) {
+                    const centerX = rect.width / 2;
+                    const centerY = rect.height / 2;
+                    const rotateX = (y - centerY) / 10;
+                    const rotateY = (centerX - x) / 10;
+                    
+                    card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-10px)`;
+                } else {
+                    card.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) translateY(0px)';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
